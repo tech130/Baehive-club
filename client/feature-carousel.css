@@ -1,0 +1,52 @@
+.feature-section {
+  background: white;
+  padding: 64px 0;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+}
+
+.carousel-card {
+  animation: scroll-left var(--speed) linear infinite;
+}
+
+.carousel-track.right .carousel-card {
+  animation-name: scroll-right;
+}
+
+.carousel-card:hover {
+  animation-play-state: paused;
+}
+
+/* Animations */
+@keyframes scroll-left {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-150%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-150%); }
+  to { transform: translateX(100%); }
+}
+
+/* ===== Card Base ===== */
+.card {
+  width: 280px;
+  height: 176px;
+  border-radius: 21px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* You can keep extending styles here */
